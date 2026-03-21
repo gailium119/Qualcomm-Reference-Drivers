@@ -668,3 +668,37 @@
 | 1.115.30.0 | SurfaceTypeCoverV7FprUdeDriver.cab |
 | 2.131.28.0 | SurfaceTypeCoverV7FwUpdate.cab |
 | 4.15.12412.20033 | WbfUsbDriver.cab |
+
+## Microsoft Corporation System Hardware Update (200.0.24.0) - 200.0.24.0
+
+### Updated
+
+| Driver version | Package |
+|----------------|---------|
+| 1.0.4369.8700 | qccamflash_ext8280.cab |
+| 1.0.4369.8700 | qccamflash8280.cab |
+| 1.0.4369.8700 | qccamisp_ext8280.cab |
+| 1.0.4369.8700 | qccamisp8280.cab |
+| 1.0.4369.8700 | qccamjpege8280.cab |
+| 1.0.4369.8700 | qccammipicsi_ext8280.cab |
+| 1.0.4369.8700 | qccammipicsi8280.cab |
+| 1.0.4369.8700 | qccamplatform8280.cab |
+| 1.0.4369.8700 | qcpilEXT8280.cab |
+| 1.0.4369.8700 | qcsecapp.cab |
+| 1.0.4369.8700 | QcSkExt8280.cab |
+| 1.0.4369.8700 | qcsp8280.cab |
+| 1.0.4369.8700 | qcsubsys_ext_cdsp18280.cab |
+| 1.0.4369.8700 | qcsubsys_ext_spss8280.cab |
+| 1.0.4369.8700 | qcsubsys8280.cab |
+| 1.0.4369.8700 | surfacecamauxsensor_extension8280.cab |
+| 1.0.4369.8700 | surfacecamauxsensor8280.cab |
+| 1.0.4369.8700 | surfacecamavs_ext8280.cab |
+| 1.0.4369.8700 | surfacecamavs8280.cab |
+| 1.0.4369.8700 | surfacecamfrontsensor_extension8280.cab |
+| 1.0.4369.8700 | surfacecamfrontsensor8280.cab |
+| 1.0.4369.8700 | surfacecamplatform_ext8280.cab |
+| 1.0.4369.8700 | surfacecamrearsensor_extension8280.cab |
+| 1.0.4369.8700 | surfacecamrearsensor8280.cab |
+| 1.0.4369.8700 | surfacepro_ext_QCTree8280.cab |
+| 1.0.4369.8702 | surface_pro_acsp_arc8280.cab |
+| 19.63.235.0 | Surface_UEFI.cab |

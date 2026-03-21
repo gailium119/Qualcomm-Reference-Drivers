@@ -1012,3 +1012,27 @@
 | 1.0.4374.1301 | qcbluetooth8380.cab |
 | 1.0.4422.300 | qcbtaddvscregistry8380.cab |
 | 1.14.490.0 | miscwlanext.cab |
+
+## Microsoft Corporation System Hardware Update (200.0.47.0) - 200.0.47.0
+
+### Updated
+
+| Driver version | Package |
+|----------------|---------|
+| 1.0.4422.300 | qccamflash_ext8380.cab |
+| 1.0.4422.300 | qccamflash8380.cab |
+| 1.0.4422.300 | qccamisp_ext8380.cab |
+| 1.0.4422.300 | qccamisp8380.cab |
+| 1.0.4422.300 | qccamjpege8380.cab |
+| 1.0.4422.300 | qccammipicsi_ext8380.cab |
+| 1.0.4422.300 | qccammipicsi8380.cab |
+| 1.0.4422.300 | qccamplatform8380.cab |
+| 1.0.4422.300 | qccamsecureisp_ext8380.cab |
+| 1.0.4422.300 | qccamsecureisp8380.cab |
+| 1.0.4422.301 | surfacecamauxsensor_extension8380.cab |
+| 1.0.4422.301 | surfacecamauxsensor8380.cab |
+| 1.0.4422.301 | surfacecamavs_ext8380.cab |
+| 1.0.4422.301 | surfacecamavs8380.cab |
+| 1.0.4422.301 | surfacecamfrontsensor_extension8380.cab |
+| 1.0.4422.301 | surfacecamfrontsensor8380.cab |
+| 1.0.4422.301 | surfacecamplatform_ext8380.cab |
