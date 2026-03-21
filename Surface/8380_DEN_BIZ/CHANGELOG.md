@@ -1097,7 +1097,7 @@
 | 1.0.4422.300 | qcbtaddvscregistry8380.cab |
 | 1.14.490.0 | miscwlanext.cab |
 
-## Microsoft Corporation System Hardware Update (200.0.43.0) - 200.0.43.0
+## Microsoft Corporation System Hardware Update (200.0.43.0) - 200.0.43.0 (Pulled)
 
 ### Updated
 
@@ -1105,3 +1105,23 @@
 |----------------|---------|
 | 175.176.235.0 | surface_uefi.cab |
 | 27.201.139.0 | surfacesam.cab |
+
+## Microsoft Corporation System Hardware Update (200.0.44.0) - 200.0.44.0
+
+### Updated
+
+| Driver version | Package |
+|----------------|---------|
+| 175.182.235.0 | surface_uefi.cab |
+| 27.201.139.0 | surfacesam.cab |
+
+## Microsoft Corporation System Hardware Update (200.0.45.0) - 200.0.45.0
+
+### Updated
+
+| Driver version | Package |
+|----------------|---------|
+| 1.115.30.0 | surfacetypecoverv7fprudedriver.cab |
+| 2.131.28.0 | surfacetypecoverv7fwupdate.cab |
+| 3.0.247.0 | surfacepaneldriver.cab |
+| 4.15.12412.20033 | wbfusbdriver.cab |
