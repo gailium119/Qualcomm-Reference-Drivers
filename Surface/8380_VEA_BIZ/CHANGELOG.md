@@ -331,3 +331,14 @@
 | 1.0.4374.1300 | qcwlanhmt8380.cab |
 | 1.0.4374.1301 | qcbluetooth8380.cab |
 | 1.0.4422.300 | qcbtaddvscregistry8380.cab |
+
+## Microsoft Corporation System Hardware Update (200.0.15.0) - 200.0.15.0
+
+### Updated
+
+| Driver version | Package |
+|----------------|---------|
+| 2.0.4478.2200 | qcsubsys_ext_cdsp8380.cab |
+| 2.0.4478.2200 | qcsubsys8380.cab |
+| 30.0.219.1000 | qcnspmcdm_ext_cdsp8380.cab |
+| 30.0.219.1000 | qcnspmcdm8380.cab |
