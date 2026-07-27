@@ -1,0 +1,84 @@
+name: Cleanup Old Version Directories
+
+on:
+  # 手动触发，可指定扫描的根目录
+  workflow_dispatch:
+    inputs:
+      base_path:
+        description: '要扫描的根目录（默认：仓库根目录）'
+        required: false
+        default: '.'
+  # 可选：定时触发（例如每周日凌晨）
+  schedule:
+    - cron: '0 0 * * 0'
+
+# 需要写入仓库内容的权限
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # 获取完整历史，避免推送问题
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Remove old version directories
+        shell: bash
+        run: |
+          BASE_PATH="${{ github.event.inputs.base_path || '.' }}"
+          echo "扫描目录: $BASE_PATH"
+
+          # 查找所有符合 a.b.c.d 格式的目录（四段纯数字）
+          # 并按父目录分组处理
+          find "$BASE_PATH" -type d -regextype posix-extended \
+            -regex '.*/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$' \
+            -print0 | while IFS= read -r -d '' version_dir; do
+            # 提取父目录路径
+            parent=$(dirname "$version_dir")
+            echo "$parent"
+          done | sort -zu | while IFS= read -r -d '' parent; do
+            echo "处理父目录: $parent"
+
+            # 取出该父目录下所有版本子目录，按版本排序
+            mapfile -d '' dirs < <(
+              find "$parent" -maxdepth 1 -type d -regextype posix-extended \
+                -regex '.*/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$' -print0 | sort -zV
+            )
+
+            if [ ${#dirs[@]} -le 1 ]; then
+              echo "  只有一个或没有版本目录，跳过。"
+              continue
+            fi
+
+            # 最高版本是排序后的最后一个
+            highest="${dirs[-1]}"
+            echo "  最高版本: $(basename "$highest")"
+
+            for d in "${dirs[@]}"; do
+              if [ "$d" != "$highest" ]; then
+                echo "  删除: $(basename "$d")"
+                rm -rf "$d"
+              fi
+            done
+          done
+
+      - name: Commit and push changes
+        shell: bash
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "没有发生任何更改，跳过提交。"
+          else
+            git add -A
+            git commit -m "chore: 删除旧版本目录，仅保留最高版本"
+            git push
+            echo "已提交并推送更改。"
+          fi
